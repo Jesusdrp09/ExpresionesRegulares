@@ -1,0 +1,59 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color:#7DDFBB;
+}
+
+.correcto{
+    background-color: green;
+}
+
+form{
+    border: 2px solid black;
+    box-shadow: 9px 10px 5px 0 black;
+    width: 700px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    background-color: #3CE6A7;
+}
+
+#formulario{
+    width: 380px;
+}
+
+#palabra, #expresion{
+    border: 1px solid black;
+    font-size: 14px;
+}
+
+#expresion{
+    width: 265px;
+}
+
+label{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#validar{
+    display: flex;
+    margin: auto;
+    background-color: rgb(60, 221, 60);
+    border-radius: 5px 5px 5px 5px;
+    padding: 0.2rem 0.7rem;
+}
+
+#validar:hover{
+    cursor: pointer;
+    background-color: rgb(9, 109, 9);
+}
+
+#contenedorMensaje{
+    width: 200px;
+    margin-left: 20px;
+    padding-left: 30px;
+    border-left: 2px solid black;
+}

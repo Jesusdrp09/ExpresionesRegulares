@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones regulares</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <form action="">
+        <div id="formulario">
+            <label for="palabra a verificar">Palabra a verificar</label>
+            <input type="text" id="palabra"><br><br>
+            <label for="expresion">Expresion</label>
+            <input type="text" value="[A-Z][0-9]{3}[a-z]{3}\W{3}" id="expresion"><br><br>
+            <input type="button" value="validar" id="validar">
+        </div>
+        <div id="contenedorMensaje">
+            <h3 id="mensaje">Introducir la palabra a verificar</h3>
+        </div>
+    </form>
+</body>
+<script src="js/codigo.js"></script>
+</html>
