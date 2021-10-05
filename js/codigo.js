@@ -1,8 +1,7 @@
-let palabraInput = document.getElementById("palabra");
 let validar = document.getElementById("validar");
-let resultado = document.getElementById("mensaje");
 
 validar.onclick = ()=>{
+    let resultado = document.getElementById("mensaje");
     if(haySimilitud()){
         resultado.innerText = "Correcto";
         console.log("Hay similitud");
@@ -12,48 +11,29 @@ validar.onclick = ()=>{
     }
 }
 
-palabraInput.oninput = ()=>{
-    if(haySimilitud() && !palabraInput.classList.contains("correcto")){
-        palabraInput.classList.add("correcto");
-        console.log("correcto");
-    }else if(!haySimilitud() && palabraInput.classList.contains("correcto")){
-        palabraInput.classList.toggle("correcto");
-    }
-}
-
 const haySimilitud = ()=>{
     let palabraverificar = document.getElementById("palabra").value;
     let expresion = document.getElementById("expresion").value;
+    
     console.log(palabraverificar);
     console.log(expresion);
-    if(verificar(palabraverificar, expresion)){
-        return true;
-    }else{
-        return false;
-    }
+
+    return verificarExpresion(palabraverificar, expresion);
 }
 
-const verificar = (palabraverificar, expresion) =>{
+const verificarExpresion = (palabraverificar, expresion) =>{
     let Myrege = new RegExp(expresion, 'g');
-    array = Myrege.exec(palabraverificar);
+    let array = Myrege.exec(palabraverificar);
     try {
         console.log(array[0]);
-        if(verificarSimilitud(array[0], palabraverificar)){
+        if(array[0] == palabraverificar){
             return true;
         }else{
             return false;
         }
     } catch (e) {
         if(e instanceof TypeError){
-            console.log("null");
+            console.log("Array vacio (null)");
         }
-    }
-}
-
-const verificarSimilitud = (variable, palabraverificar)=>{
-    if(variable == palabraverificar){
-        return true;
-    }else{
-        return false;
     }
 }
